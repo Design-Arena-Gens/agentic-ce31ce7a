@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --background: #06060e;
+  --foreground: #f8fafc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsla(0, 0%, 100%, 0.3) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  border-radius: 9999px;
+}
+
+body {
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(239, 68, 68, 0.18), transparent 45%), var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: -0.01em;
+}
